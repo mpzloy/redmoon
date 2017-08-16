@@ -1,0 +1,98 @@
+@import "vars";
+@import "smart-grid";
+
+.reset();
+
+.wrapper {
+  .wrapper();
+}
+
+.viber {
+  fill: #7F40BD;
+  width: calc(@w_social / 1.5);
+}
+
+.mail {
+  fill: @grey_middle;
+  width: calc(@w_social / 1.5);
+}
+
+.phone {
+  width: 20px;
+  fill: @grey_middle;
+}
+
+.skype {
+  width: calc(@w_social / 1.5)
+}
+
+.in {
+  background-color: #0077b5;
+  border-radius: 5px;
+  padding: 5px;
+  width: calc(@w_social - 10px);
+  fill: #fff;
+  .g_fil_hov();
+  .hover();
+}
+
+.fb {
+  width: calc(@w_social / 1.8);
+  fill: #3B5998;
+  .g_fil_hov();
+  .hover();
+}
+
+.instagram {
+  width: @w_social;
+  .g_fil_hov();
+  .hover();
+}
+
+.footer-inf {
+  .row-flex();
+  margin-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  border-bottom: 1px solid rgba(120, 117, 118, .2);
+}
+
+.logo {
+  .col();
+  .size(3);
+  li {
+    margin: 10px 0;
+  }
+}
+
+.contact {
+  .col();
+  .size(3);
+  font-size: 18px;
+  display: flex;
+
+  li {
+    a {
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      &:hover{
+        text-decoration: none;
+        fill: @red_middel;
+      }
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.social {
+  .col();
+  .size(3);
+
+  &_item {
+    margin-right: 20px;
+    display: inline-block;
+  }
+}
