@@ -10,20 +10,24 @@
 .viber {
   fill: #7F40BD;
   width: calc(@w_social / 1.5);
+  .sm(width, calc(@w_social / 2));
 }
 
 .mail {
   fill: @grey_middle;
   width: calc(@w_social / 1.5);
+  .sm(width, calc(@w_social / 2));
 }
 
 .phone {
   width: 20px;
   fill: @grey_middle;
+  .sm(width, 16px);
 }
 
 .skype {
-  width: calc(@w_social / 1.5)
+  width: calc(@w_social / 1.5);
+  .sm(width, calc(@w_social / 2));
 }
 
 .in {
@@ -51,24 +55,20 @@
 
 .footer-inf {
   .row-flex();
-  margin-top: 20px;
   padding-bottom: 20px;
   align-items: center;
   border-bottom: 1px solid rgba(120, 117, 118, .2);
 }
 
-.logo {
-  .col();
-  .size(3);
-  li {
-    margin: 10px 0;
-  }
-}
-
 .contact {
   .col();
-  .size(3);
-  font-size: 18px;
+  .size(4);
+  .size-md(6);
+  .sm(font-size, 18px);
+  .size-xs(12);
+  .xs(justify-content, center);
+  margin-top: 20px;
+  font-size: 22px;
   display: flex;
 
   li {
@@ -88,11 +88,19 @@
 }
 
 .social {
+  display: flex;
+  justify-content: center;
   .col();
-  .size(3);
-
+  .size(4);
+  .size-md(12);
+  .size-sm(12);
+  .size-xs(12);
+  margin-top: 20px;
   &_item {
     margin-right: 20px;
+
+  }
+  .instagram{
     display: inline-block;
   }
 }
