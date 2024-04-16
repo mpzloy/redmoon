@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="RedMoonItCompany" description="Red moon it company page by astro">
+    <main class="main-bg">
+        <section class="contactForm contactForm-bg">
+            <div class="wrapper">
+                <div class="contactForm-heading">
+                    <div class="row-rm">
+                        <div class="contactForm-title"><h1>Связаться с нами</h1></div>
+                    </div>
+                    <div class="row-rm">
+                        <div class="contactForm-description">
+                            <p>Благодарим вас за интерес к нашей компании и предоставляемым услугам. Пожалуйста,
+                                заполните форму ниже
+                                или напишите нам по адресу <a href="mailto:redmoonitcompany@gmail.com">
+                                    redmoonitcompany@gmail.com</a>, и мы
+                                свяжемся с вами в ближайшее время.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contactForm">
+            <div class="wrapper">
+
+                <div class="contactForm-body">
+                    <div id="rm-contacts-form-wrapper">
+                        <!--<div class="well">
+                            <form role="form" id="contactForm" data-toggle="validator" class="shake">
+                                <div class="contactForm-col">
+                                    <p style="color: green;"></p>
+                                    <div class="form-group">
+                                        <label for="name" class="h4">Имя</label>
+                                        <input type="text" class="contactForm-input" id="name" placeholder="Ваше Имя"
+                                               required data-error="Поле не заполнено">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="company" class="h4">Компания</label>
+                                        <input type="text" class="contactForm-input" id="company"
+                                               placeholder="Введите название вашей компании" required
+                                               data-error="Поле не заполнено">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="h4">Email</label>
+                                        <input type="email" class="contactForm-input" id="email" placeholder="Введите email"
+                                               required data-error="Поле не заполнено">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone" class="h4">Телефон</label>
+                                        <input type="text" class="contactForm-input" id="phone"
+                                               placeholder="Введите телефон" required data-error="Поле не заполнено">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="contactForm-col">
+                                    <div class="form-group">
+                                        <label for="message" class="h4">Сообщение</label>
+                                        <textarea id="message" class="contactForm-textarea" rows="5"
+                                                  placeholder="Введите ваше Сообщение" required
+                                                  data-error="Поле не заполнено"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <button type="submit" id="form-submit" class="contactForm-submit form-submit">
+                                    Отправить
+                                </button>
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+
+                            </form>
+                        </div>-->
+
+                        <form id="contactForm" class="shake" enctype="multipart/form-data"
+                              accept-charset="UTF-8"><!--id="request-form" action="contact.html" method="post" -->
+                            <div class="row-rm form-wrapper" id="edit-data">
+                                <div class="contactForm-col form-wrapper" id="edit-contact">
+                                    <div class="contactForm-caption form-wrapper" id="edit-title">
+                                        <h4>О вас</h4></div>
+                                    <div class="contactForm-line">
+                                        <div class="contactForm-block contactForm-block--require">
+                                            <input class="contactForm-input inactive form-text required" tabindex="1"
+                                                   type="text" id="name" name="name" value="" size="60"
+                                                   maxlength="128" required data-error="Поле не заполнено"/>
+                                            <div class="help-block with-errors"></div>
+
+                                            <label class="contactForm-placeholder" for="name">Имя</label><span
+                                                class="contactForm-correct" title="Correct"></span><span
+                                                class="contactForm-del" title="Clear"></span></div>
+
+                                    </div>
+                                    <div class="contactForm-line">
+                                        <div class="contactForm-block">
+                                            <input class="contactForm-input inactive form-text" tabindex="2" type="text"
+                                                   id="edit-company" name="company" value="" size="60" maxlength="128"/>
+                                            <label class="contactForm-placeholder" for="edit-company">Компания</label>
+                                        </div>
+                                    </div>
+                                    <div class="contactForm-line">
+                                        <div class="contactForm-block">
+                                            <input class="contactForm-input inactive form-text" tabindex="3" type="text"
+                                                   id="edit-phone" name="phone" value="" size="60" maxlength="128"/>
+                                            <label class="contactForm-placeholder" for="edit-phone">Телефон</label>
+                                        </div>
+                                    </div>
+                                    <div class="contactForm-line">
+                                        <div class="contactForm-block contactForm-block--require">
+                                            <input class="contactForm-input inactive form-text required" tabindex="4"
+                                                   type="email" id="email" name="email" value="" size="60"
+                                                   maxlength="128" required data-error="Поле не заполнено"/>
+                                            <label class="contactForm-placeholder" for="email">Email</label><span
+                                                class="contactForm-correct" title="Correct"></span><span
+                                                class="contactForm-del" title="Clear"></span></div>
+                                    </div>
+                                </div>
+
+                                <div class="contactForm-col form-wrapper" id="edit-request">
+                                    <div class="contactForm-caption form-wrapper" id="edit-title--2">
+                                        <h4>Дополнительная информация</h4></div>
+                                    <div class="contactForm-line">
+                                        <div class="contactForm-block contactForm-block--require">
+                                        <textarea class="contactForm-textarea inactive form-textarea required"
+                                                  tabindex="6" id="message" name="message" cols="60"
+                                                  rows="5" required data-error="Поле не заполнено"></textarea>
+                                            <label class="contactForm-placeholder" for="message">Пожалуйста, напишите
+                                                подробнее</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row-rm">
+                                <div class="form-col form-actions form-wrapper" id="edit-actions">
+                                    <div class="form-wrapper" id="edit-grid">
+                                        <div class="contactForm-button form-wrapper" id="edit-button">
+                                            <input class="contactForm-submit form-submit" tabindex="8" type="submit"
+                                                   id="edit-submit" name="op" value="Отправить"/>
+                                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        </div>
+                                        <div class="contactForm-note form-wrapper" id="edit-note"><span
+                                                class="contactForm-sign"><span class="contactForm-star">*</span>— обязательные поля</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contactInfo contactInfo--1">
+            <div class="wrapper">
+                <div class="contactInfo-row">
+                    <div class="contactInfo-head contactInfo-head-col">
+                        <h3>Адрес и контакты</h3>
+                    </div>
+                </div>
+                <div class="contactInfo-row">
+                    <div class="contactInfo-col">
+                        <div class="contactInfo-container">
+                            <div class="contactInfo-title">Офис</div>
+                            <div class="contactInfo-data">
+                                <p>г.Киев, ул. Сырецкая 9, БЦ "Маяк"</p>
+                            </div>
+                            <div class="contactInfo-title">Контакты</div>
+                            <div class="contactInfo-data">
+                                <p><a href="mailto:redmoonitcompany@gmail.com">redmoonitcompany@gmail.com</a></p>
+                                <p><a href="tel:0800212420">0 800 21 24 20</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="startSteps">
+            <div class="wrapper">
+                <div class="startSteps-wrapper">
+                    <div class="startSteps-row">
+                        <div class="startSteps-head">
+                            <h3>КАК НАЧАТЬ</h3>
+                        </div>
+                    </div>
+                    <div class="startSteps-row">
+                        <div class="startSteps-body">
+                            <div class="startSteps-row">
+                                <div class="startSteps-col">
+                                    <div class="startSteps-num startSteps-num--1">1</div>
+                                    <div class="startSteps-text">
+                                        <h5>Свяжитесь</h5>
+                                        <p>Отправьте запрос на проект. Мы можем подписать Соглашение о неразглашении,
+                                            прежде
+                                            чем вы начнете делиться любой конфиденциальной информацией.</p>
+                                    </div>
+                                </div>
+                                <div class="startSteps-col">
+                                    <div class="startSteps-num startSteps-num--2">2</div>
+                                    <div class="startSteps-text">
+                                        <h5>Анализ</h5>
+                                        <p>Наш консультант свяжется с вами, чтобы уточнить ваши требования к проекту. На
+                                            этом этапе мы привлекаем экспертов в данной отрасли для разработки
+                                            оптимального технического и делового решения.</p>
+                                    </div>
+                                </div>
+                                <div class="startSteps-col">
+                                    <div class="startSteps-num startSteps-num--3">3</div>
+                                    <div class="startSteps-text">
+                                        <h5>Предложение</h5>
+                                        <p>Прояснив требования, мы предоставим наше коммерческое предложение для вашего
+                                            проекта. Мы будем рады предоставить любые
+                                            необходимые разъяснения и скорректировать предложение в ходе переговорного
+                                            процесса.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contactPrivacy">
+            <div class="wrapper">
+                <div class="contactPrivacy-row">
+                    <div class="contactPrivacy-head">
+                        <h3>Конфиденциальность</h3>
+                    </div>
+                </div>
+                <div class="contactPrivacy-row">
+                    <div class="contactPrivacy-body">
+                        <p>Мы уважаем вашу конфиденциальность и принимаем комплексные меры для защиты вашей личной и
+                            деловой
+                            информации. Мы не будем передавать ваши учетные данные и бизнес-данные третьим лицам без
+                            вашего
+                            разрешения. Многоуровневые политики и процедуры корпоративной безопасности обеспечивают
+                            предотвращение потери, неправильного использования или несанкционированного распространения
+                            любой важной для вас информации, которую вы передаете нам.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
